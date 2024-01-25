@@ -2,6 +2,7 @@ const express = require("express");
 const dotenv = require("dotenv");
 const figlet = require("figlet");
 dotenv.config({ path: "config.env" });
+const cors = require('cors')
 require("colors");
 const colors = require("colors/safe");
 const morgan = require("morgan");
@@ -16,6 +17,8 @@ connectDB();
 
 // Init App
 const app = express();
+
+app.use(cors())
 
 // Middlewares
 app.use(express.json());

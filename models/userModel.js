@@ -3,6 +3,8 @@ const mongoose = require("mongoose");
 // Create Schema
 const UserSchema = new mongoose.Schema(
   {
+    client_code: Number,
+
     name: {
       type: String,
       trim: true,
@@ -32,6 +34,10 @@ const UserSchema = new mongoose.Schema(
     },
 
     address: String,
+
+    street: String,
+
+    city: String,
   },
   { timestamps: true }
 );
