@@ -13,8 +13,6 @@ const UserSchema = new mongoose.Schema(
 
     email: {
       type: String,
-      required: [true, "Email must be unique"],
-      unique: [true, "Email must be unique"],
       trim: true,
       lowercase: true,
     },
@@ -23,7 +21,6 @@ const UserSchema = new mongoose.Schema(
 
     password: {
       type: String,
-      required: [true, "Password is required"],
       minlength: [6, "Too short password"],
     },
 
