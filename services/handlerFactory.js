@@ -86,5 +86,10 @@ exports.getAll = (Model, modelName = "") =>
     // Send Response To Client
     res
       .status(200)
-      .json({ results: documents.length, paginationResults, data: documents });
+      .json({
+        count: documentsCount,
+        results: documents.length,
+        paginationResults,
+        data: documents,
+      });
   });
